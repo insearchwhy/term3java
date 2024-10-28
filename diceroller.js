@@ -41,3 +41,23 @@ console.log("The side you rolled in this 16 sided die is:" + diceSide15)
 const rollDice8 = () => rollDice(8);
 console.log("the side you rolled for the 8 sided die is:" + rollDice8());
 
+
+// Implementing the callback feature/functionality/characteristics of function
+function customDiceRoll(side, callback) {
+    return callback(side);
+}
+
+result = customDiceRoll(30, rollDice);
+console.log(result)
+
+// Funtion to roll multiple dice
+
+function rollMultipleDice(numDice, diceSize, callback) {
+    for (let i=0; i < numDice ; i++) {
+        const result = rollDice(diceSize);
+        callback(result);
+    }
+   
+}
+
+rollMultipleDice(3, 6, (result) => console.log("Rolled: " + result));
