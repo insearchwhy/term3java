@@ -2,6 +2,11 @@ console.log("start of the dice roller");
 
 // simple dice roller function
 
+/**
+ * example jsdoc comment - simple dice roller function
+ * @param {number} [diceSize 6] 
+ * @returns dice side
+ */
 function rollDice(diceSize = 6) {
     console.log(`Rolling a ${diceSize}-sided die...`);
     let diceSide = Math.ceil(Math.random() * diceSize);
